@@ -19,7 +19,7 @@ Route::prefix('account')->group(function () {
     Route::get('admin/{number}', [MainController::class, 'userProfile'])->name('admin_profile_number');
 });
 Route::get('/', [MainController::class,'index'])->middleware('test_id_company:id')->name('index');
-Route::post('/search', [MainController::class,'search'])->middleware('test_id_company:id')->name('search');
+Route::get('/search', [MainController::class,'search'])->middleware('test_id_company:id')->name('search');
 Route::view('/anotherUri', 'listClients', ['title' => "Welcome to the High School"])->name('anotherUri');
 Route::get('/list/{id}', [MainController::class, 'listClients'])->whereNumber('id')->name('clients');
 Route::get('/products/{id?}', [MainController::class, 'listProducts'])->name('products');

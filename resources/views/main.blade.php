@@ -11,56 +11,32 @@
 
 <body>
     <div class="container">
-        <div class="main">
-
-            <br>
-
-            <form action="/search" method="post">
-                @csrf
-
-                <label for="id">Enter your Search</label>
-                <input type="text" name="search" id="search">
-                
-                <x-button-agreed text="Вперед"/>
-            </form>
-            <br>
-            <!-- Table for results  -->
-
-            @if ($cars ?? '')
-                <table>
-                    <caption><b>Table of Cars</b> </caption>
-
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Year</th>
-                        <th>HP</th>
-                    </tr>
-
-
+        <main>
+            <div class="row">
+                <h1>
+                    {{$count}}
+                </h1>
+                @if ($cars ?? '')
                     @foreach ($cars as $car)
-
-                        <tr>
-                            <th>{{ $car->id }} </td>
-                            <td>{{ $car->name }}</td>
-                            <td>{{ $car->year }}</td>
-                            <td>{{ $car->HP }}</td>
-                        </tr>
-
-
+                        <div class="col-lg-3 col-xl-2 col-xxl-3 title-col">
+                            <h3>{{$car->id}}</h3>
+                        </div>
+                        <div class="col-lg-3 col-xl-2 col-xxl-3 title-col">
+                            <h3>{{$car->name}}</h3>
+                        </div>
+                        <div class="col-lg-3 col-xl-2 col-xxl-3 title-col">
+                            <h3>{{$car->HP}}</h3>
+                        </div>
+                        <div class="col-lg-3 col-xl-2 col-xxl-3 title-col">
+                            <h3>{{$car->year}}</h3>
+                        </div>
                     @endforeach
 
-                </table>
-        </div>
+                @endif
+
+            </div>
+        </main>
     </div>
-
-
-    @if (count($cars) > 1)
-        {{ $cars->links() }}
-    @endif
-    @endif
-
-
 
 </body>
 

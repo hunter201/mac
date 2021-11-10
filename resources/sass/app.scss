@@ -1,34 +1,30 @@
-@import '~bootstrap';
+@import "~bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
     padding: 10px;
+    font-size: 10px;
 }
 
-button {
-    background-color: aquamarine;
-    font-size: 14px;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-transform: uppercase;
-    &.mt-4 {
-        background-color: rgb(189, 176, 142);
-        padding: 3px 5px;
-    }
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
 }
 
-table {
-    border: 2px solid rgb(180, 42, 42);
-    padding: 4px 5px;
-    border-collapse: collapse;
-    caption-side: top;
-    th {
-        text-transform: uppercase;
+.title-col {
+    border: 1px solid #000; 
+    text-align: center;
+    & h3 {
+        color: blue;
+        margin: 0;
     }
     
-    th,td,caption{
-        border: 1px solid #000;
-        text-align: center;
-    }
 }
-

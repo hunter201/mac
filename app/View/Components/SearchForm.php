@@ -4,20 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class ButtonAgreed extends Component
+class SearchForm extends Component
 {
 
-    public $text;
-    public $class;
+    public $message;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($text)
+    public function __construct()
     {
-        $this->text = $text;
-        
     }
 
     /**
@@ -27,6 +24,6 @@ class ButtonAgreed extends Component
      */
     public function render()
     {
-        return view('components.button-agreed');
+        return view('components.search-form');
     }
 }
