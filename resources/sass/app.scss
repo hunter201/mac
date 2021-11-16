@@ -1,16 +1,19 @@
 @import "~bootstrap";
-
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+$navbar-color: #2e2e2e;
 
 * {
     margin: 0;
     padding: 0;
+    border: none !important;
     box-sizing: border-box;
 }
 
 html {
-    
     font-size: 10px;
 }
 
@@ -25,8 +28,7 @@ body {
     }
 }
 
-.navbar-right {
-}
+
 
 ul {
     list-style-type: none;
@@ -35,15 +37,25 @@ ul {
 
         a {
             font-size: 1.4rem;
-            color: #000;
+            color: $navbar-color;
             padding: 2rem;
             text-decoration: none;
         }
     }
 }
 
+.navbar__register {
+    padding: 0.7rem 2rem;
+    font-size: 1.75rem;
+}
+
+.navbar__bordered {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
 .bg-main {
     height: 0.5rem;
+    padding: 0;
 }
 
 .bg-main-1 {
@@ -90,4 +102,8 @@ p {
         color: rgb(19, 73, 14);
         margin: 0;
     }
+}
+
+.main-content__header {
+    padding: 2rem;
 }
