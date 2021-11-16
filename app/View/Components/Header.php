@@ -4,10 +4,8 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class SearchForm extends Component
+class Header extends Component
 {
-
-    public $message;
     /**
      * Create a new component instance.
      *
@@ -15,6 +13,7 @@ class SearchForm extends Component
      */
     public function __construct()
     {
+        //
     }
 
     /**
@@ -24,6 +23,6 @@ class SearchForm extends Component
      */
     public function render()
     {
-        return view('components.search-form');
+        return view('components.header');
     }
 }
